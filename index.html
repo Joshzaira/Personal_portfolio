@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshzaira Mae Borja - Portfolio</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: #DE5D83;
+            color: white;          
+            padding: 1rem;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+        
+        .profile-picture {
+            flex: 0 0 auto;
+            margin-right: 1rem;
+        }
+        
+        .profile-picture img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+        
+        .header-text {
+            flex: 1;
+            min-width: 250px; 
+        }
+        
+        .header-text h1 {
+            margin: 0;
+        }
+        
+        .header-text p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+        
+        .container { 
+            display: flex; 
+            flex-direction: row; 
+            flex-wrap: wrap; 
+            margin: 2rem auto; 
+            width: 90%;
+            max-width: 1200px; 
+            box-sizing: border-box;
+            
+      
+        }
+
+        nav { 
+            flex: 2;
+            min-width: 200px; 
+            padding: 1rem; 
+            background: white; 
+            margin-right: 1rem; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        } 
+        
+        nav a {
+            display: block;
+            padding: 0.8rem 1rem;
+            color: #4267B2;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background: #e7f3ff;
+        }
+        
+        main { 
+            flex: 3; 
+            min-width: 300px; 
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 2rem; 
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            margin-bottom: 2rem; 
+        }
+
+        footer {
+            text-align: center;
+            background: #DE5D83;
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        a {
+            color: #4267B2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 1rem auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+       .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform; 
+        }
+ 
+       .carousel-image {
+            min-width: 100%;
+            user-select: none;
+            pointer-events: none; 
+        }
+    
+       .carousel-btn { 
+            position: absolute; 
+            top: 50%; transform: 
+            translateY(-50%); 
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: white; 
+            border: none; 
+            padding: 0.5rem 1rem; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+            border-radius: 50%; z-index: 10;      }
+    
+       .carousel-btn.prev { 
+            left: 10px; 
+         } 
+         
+       .carousel-btn.next { 
+            right: 10px; 
+         }  
+       
+       .carousel-btn:hover { 
+            background-color: rgba(0, 0, 0, 0.8); 
+         }
+
+        form {
+            display: flex;
+            flex-direction: column; 
+            gap: 12px;
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 4px; 
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%; 
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #4267B2; 
+        }
+
+        form button {
+            padding: 10px 20px;
+            background: #DE5D83;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        form button:hover {
+            background: gray; 
+        }
+
+        /* Media Query for Smaller Screens */
+        @media (max-width: 768px) {
+        
+            form {
+                width: 90%; 
+            }
+
+            form button {
+                width: 100%;
+            }   
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="profile-picture">
+            <img src="Borja, Joshzaira.png" alt="Profile Picture">
+        </div>
+        <div class="header-text">
+            <h1>Joshzaira Mae Borja</h1>
+            <p>Front-End Developer</p>
+            <p>- We don't just build websites, we build experiences.</p>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <p>I'm a student with a strong interest in Information Systems. My academic background in making websites, and application dev has provided me with a solid foundation in Teamwork, Time Management, with the use of some programming languages; HTML,CSS, etc..  I'm currently focusing on developing my skills in Front-end skills and a bit of Back-end in some cases and actively seeking opportunities to gain practical experience.</p>
+            <p><strong>Skills:</strong> HTML, CSS</p>
+            <p><strong>Unique Selling Point:</strong> Problem-solving, Creative Design, Team Work, Time Management </p>
+            <a href="resume.pdf" class="cta-buttons" download>Download My Resume</a>
+        </section>
+        
+        <section class="section" id="projects">
+    <h2>Portfolio/Projects</h2>
+    <article>
+        <h3><strong>Information Systems Strategic Planning</strong></h3>
+        <p><strong>(A Strategic Plan for BULAWAN ARCHIVES AND SHRINE CURATION DIVISION (MBASCD): Enhancing Artistic Growth through ICT)</strong></p>
+        <p>Description: Museo Bulawan's exhibits include a variety of historical and cultural artifacts, such as antique utensils, old currency, and jewelry. It also features collections that commemorate local heroes and significant events in the province's history.</p>
+        <p><strong>Technologies Used:</strong> Proposed Data Management, User Access Interface, Technology Infrastructure, Planned Website, HTML, CSS, Javascript.</p>
+        <a href="https://example.com/project-demo" target="_blank">Live Demo</a>
+
+
+<div class="carousel" id="carousel1">
+    <button class="carousel-btn prev" id="prevBtn1">&lt;</button>
+    <div class="carousel-images">
+        <img src="Museo Bulawan.png" alt="Project Image 1" class="carousel-image">
+        <img src="Museo Bulawan (1).png" alt="Project Image 2" class="carousel-image">
+        <img src="Museo Bulawan (2).png" alt="Project Image 3" class="carousel-image">
+    </div>
+    <button class="carousel-btn next" id="nextBtn1">&gt;</button>
+</div>
+
+    </article>
+    
+    <article>
+        <h3>Application Development</h3>
+        <p><strong>So, Soo..Pretty - Beauty Tips and Lifestyle</strong></p>
+        <p>Description: Personalized beauty recommendations to discover products, looks, and tips that can enhance one's unique style.</p>
+        <p><strong>Technologies Used:</strong> Website, HTML, CSS, Javascript.</p>
+        <a href="https://example.com/project-demo" target="_blank">Live Demo</a>
+
+
+<div class="carousel" id="carousel2">
+    <button class="carousel-btn prev" id="prevBtn2">&lt;</button>
+    <div class="carousel-images">
+        <img src="ha.jpg" alt="Project Image 1" class="carousel-image">
+        <img src="ha1.jpeg" alt="Project Image 2" class="carousel-image">
+    </div>
+    <button class="carousel-btn next" id="nextBtn2">&gt;</button>
+</div>
+
+    </article>
+    
+    <article>
+        <h3>Website Development</h3>
+        <p><strong>RKYVE Study Co-work Space Cafe</strong></p>
+        <p>Description: The unique blend of coworking space and cafe offers a comfortable and productive environment for students and professionals alike. Enjoy high-speed Wi-Fi, comfortable seating, specialty coffee, and a welcoming atmosphere.
+
+</p>
+        <p><strong>Technologies Used:</strong> Website, HTML, CSS, Javascript, Database.</p>
+        <a href="https://example.com/project-demo" target="_blank">Live Demo</a>
+
+
+<div class="carousel" id="carousel3">
+    <button class="carousel-btn prev" id="prevBtn3">&lt;</button>
+    <div class="carousel-images">
+        <img src="1.jpg" alt="Project Image 1" class="carousel-image">
+        <img src="2.jpg" alt="Project Image 2" class="carousel-image">
+        <img src="3.jpg" alt="Project Image 2" class="carousel-image">
+        
+    </div>
+    <button class="carousel-btn next" id="nextBtn3">&gt;</button>
+</div>
+
+    </article>
+    
+</section>
+
+
+
+<!-- JavaScript for Carousel Buttons -->
+
+<script>
+document.querySelectorAll('.carousel').forEach((carousel, index) => {
+    const imagesContainer = carousel.querySelector('.carousel-images');
+    const images = carousel.querySelectorAll('.carousel-image');
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const imageWidth = imagesContainer.offsetWidth;
+        imagesContainer.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+
+    // Adjust carousel on window resize
+    window.addEventListener('resize', updateCarousel);
+});
+</script>
+
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p>Email: <a href="mailto:borjoshzaira@gmail.com">borjoshzaira@gmail.com</a></p>
+            <p>Social Media: 
+                <a href="https://www.facebook.com/borjoshzaira" target="_blank">Facebook</a> |
+                
+            </p>
+        </section>
+    </main>
+</div>
+<footer>
+    <p>© 2024 Joshzaira Mae Borja. All rights reserved.</p>
+        <a href="#about" class="footer-nav">About Me   |</a>
+        <a href="#projects" class="footer-nav">    Portfolio    |</a>
+        <a href="#contact" class="footer-nav">    Contact</a>
+    
+</footer>
+
+<script>
+    // Smooth Scrolling for Footer Navigation Links
+    document.querySelectorAll('.footer-nav').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50, // Adjust offset if needed
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+
+<!-- JavaScript Section -->
+<script>
+    // Form Submission Handler
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Simulate sending the data
+        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+        alert("Thank you for reaching out! Your message has been sent.");
+
+        // Clear form fields after submission
+        document.getElementById("contactForm").reset();
+    });
+</script>
+</body>
+</html>
+
